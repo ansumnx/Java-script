@@ -1,0 +1,140 @@
+
+~ JS INTODUCTION
+
+~ ECMA , ESMA-262
+
+~ COMMENT / PROGRAM DEFINATION
+
+~ VARIABLES , LET , VAR ,CONST
+
+~ OPERATORS
+
+~ DATA TYPE IN JS
+
+~ IF, ELSE ,ELSE IF
+
+~ SWITCH STATEMENT
+
+~LOOP // for in loop //for of loop / for / while / do while loop
+
+~BREAK,CONTINUE,NESTED LOOP
+#you can change the name of loop anshu:for(i=1;i<10;i++);
+
+~Alert,promot,confirm() in js
+window.prompt("hello");
+alert("help");
+confirm("help");
+
+~Type conversion
+Number(n),String(s),Boolean(b),  NAN == NUMBER;
+
+~STRING Manipulation
+.lenght .indexOf() .concat(,) .substring() .lastIndexOf() .trim()  
+.trimstart() .trimend() .toLowerCase() .toUpperCase() .replace(,)
+.includes() -- return true/false.
+-1 means not present
+
+~ARRAY
+
+~array function , multi-dimensional array
+
+~function
+
+~arragument and parameter pass in function // in limit
+
+~ARGUMENT IN OBJECT // passing limitless argument
+
+~return statement 
+if return is not write it will pass undifined
+
+~GLOBAL VERIABLE VS LOCAL VERIABLE // global - use more memmory then local. 
+
+~ANONYMOUS FUNCTION // A FUNCTIN WITHOUT NAME
+FUNCTION EXPERATION // Storing a function into a veriable
+
+~setTimeout(function name , time);
+
+~immediately invoked function (function(){})();
+
+~OBJECT //property , method , how to acsess
+ways to create variable and function in object - 3 ways;
+
+~MATH OBJECT // predifined object
+Math.ceil() , Math.floor() , Math.max() , Math.min() , Math.random() , Math.trunc() , Math.pow(,) , Math.round , Math.sqrt() 
+
+~DATE OBJECT // predifined object
+let time = new Date('26 MARCH , 2002 , 9:45');
+console.log(time.getFullYear());
+
+~NEW KEYWORD
+
+~GETTER AND SETTER IN OBJECT
+just add get before any function - getter // now u dont have to use () in console. - it help as to call any method/function as a property.
+just add set before any function - setter // and u can easly use and predifined function in method; - it help us to ascess functions from anywhere;
+
+~OBJECT CONSTRATer
+
+~prototype
+
+~nested object
+
+~hoisting
+console.log(x); 
+var x ; // undifined
+let/const x ; error
+
+~ECMA Script(es6-es2015)
+-let
+-const
+-default perameter(use as a default)
+-rest parameters (...)
+-spread OPERATORS(...)
+-for..of
+-template literals ${variable};
+-Array Destructuring
+-Object Destructuring
+-Modules export/import { x } from "file.path" // type="module"; as to rename
+-default function (){};
+-Arrow function
+-callback function
+-map function
+-filter function
+-cookies(create,read,write) --browser save data 
+
+//OOps
+- class
+- object
+- inheritense
+
+//web storage
+-local storage
+-session storage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
