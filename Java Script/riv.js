@@ -4,7 +4,7 @@
 // console.log(max);
 // console.log(min);
 
-// let name = [ 'anshu' , 'smriti' , 'rahul' ,'varun'];
+// let name = [ 'anshu' , 'rahul' ,'varun'];
 // let sort = name.sort().reverse();
 // console.log(...sort);
 
@@ -124,7 +124,7 @@
 
 // console.log(teacher1.sal())
 
-let name = ["anshuman", "smriti", "ritik", "varun"];
+let name = ["anshuman", "ritik", "varun"];
 name.forEach((val) => {
   console.log(val.toUpperCase());
 });
