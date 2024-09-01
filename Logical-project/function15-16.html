@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>Enter Information:</h5>
+    <h5 style="display: inline;">Name:</h5>
+    <input type="text" id="name">
+    <h5 style="display: inline;">Birthday:</h5>
+    <input type="date" id="birth">
+    <button type="button" id="btn" onclick="birthday()">Confirm</button>
+    <h4 id="para"></h4>
+    <script>
+        function wish(msg){
+            document.getElementById("para").innerHTML = msg;
+        }
+     function birthday(){
+        let name = document.getElementById("name").value;
+        let birth =new Date(document.getElementById("birth").value);
+        let date = birth.getDate();
+        let month = birth.getMonth();
+        let today = new Date();
+        let todaydate = today.getDate();
+        let todaymonth = today.getMonth();
+        if(todaydate === date && todaymonth ===month){
+            wish(`Happy Birthday to you,${name}`);
+        }
+        else{
+            wish(`Welcome back,${name}`);
+        }
+        setTimeout(() => {
+            document.getElementById("para").innerHTML ="";
+            document.getElementById("name").value="";
+            document.getElementById("birth").value ="";
+        }, 3000);
+     }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>star printing:</h4>
+    <h5>Enter coloum then row seperated by comma(,):</h5>
+    <input type="text" id="star">
+    <button type="button" id="btn" onclick="starprint()">Print</button>
+    <h5 id="para"></h5>
+    <script>
+        function print(msg) {
+            document.getElementById("para").innerHTML += msg;
+        }
+        function printing(col, row) {
+            document.getElementById("para").innerHTML = "";
+            for (let i = 1; i <= col; i++) {
+                for (let j = 1; j <= i; j++) {
+                    print("*");
+                }
+                print("<br>");
+            }
+        }
+        function starprint() {
+            let num = document.getElementById("star").value;
+            let star =num.split(',').map(Number);
+            let row = star[1];
+            let col = star[0];
+            printing(col, row);
+            setTimeout(() => {
+                document.getElementById("star").value="";
+                document.getElementById("para").innerHTML = "";
+                
+            }, 5000);
+        }
+        </script>
+</body>
+
+</html>

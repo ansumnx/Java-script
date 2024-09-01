@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter name">
+    <button type="button" id="btn" onclick="work()">submit</button>
+    <p id="para"></p>
+    <script>
+        function work(){
+
+            let name=document.getElementById("name").value;
+            let upper=name.toUpperCase();
+            document.getElementById("para").innerHTML=upper;
+            setTimeout(()=>{
+                let name=document.getElementById("name").value="";
+                document.getElementById("para").innerHTML = "";
+
+            },2000)
+        }
+        
+    </script>
+</body>
+</html>

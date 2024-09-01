@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Roll the dise</h1>
+        <h2 id="dif">0</h2>
+        <button type="button" id="btn" onclick="roll()">roll</button>
+        <p id="para"></p>
+        <h4>NOTE: If you get six in three 3 you win else you lose.</h4>
+
+        <script>
+            let i = 0;
+            function msg(msg) {
+                document.getElementById("para").innerHTML = msg;
+            }
+
+            function roll() {
+                let random = Math.floor(Math.random() * 6) + 1;
+                document.getElementById("dif").innerHTML = random;
+                if (random === 6) {
+                    msg("you win");
+                    document.getElementById("btn").style.display = "none";
+                    setTimeout(() => {
+                        document.getElementById("dif").innerHTML = 0;
+                        document.getElementById("btn").style.display = "block";
+                        msg("");
+
+                    }, 4000);
+                }
+                else {
+                    i++;
+                    msg("try again");
+                    if (i === 3) {
+                        i = 0;
+                        msg("you lose.Better luck next time");
+                        document.getElementById("btn").style.display = "none";
+                        setTimeout(() => {
+                            document.getElementById("dif").innerHTML = 0;
+                            document.getElementById("btn").style.display = "block";
+
+                        }, 4000);
+                    }
+                }
+            }
+
+        </script>
+</body>
+
+</html>

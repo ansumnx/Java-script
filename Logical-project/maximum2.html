@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" id="value" placeholder="enter seprated numbers" />
+    <button type="button" is="btn" onclick="findmax()">find</button>
+    <p id="para"></p>
+    <script>
+      function findmaximum(num) {
+        let maxi = num[0];
+        for (let i = 1; i < num.length; i++) {
+          if (maxi < num[i]) {
+            maxi = num[i];
+          }
+        }
+        return maxi;
+      }
+
+      function findmax() {
+        let nums = document.getElementById("value").value;
+        let numbers = nums.split(",").map(Number);
+        if (numbers === 0 || numbers.some(isNaN)) {
+          document.getElementById("para").innerHTML = "enter valid number";
+        } else {
+          let maximum = findmaximum(numbers);
+          document.getElementById("para").innerHTML = "maximum is " + maximum;
+          document.getElementById("value").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Calculator:<mark>SUM and MULTIPLY</mark></h4>
+    <h4>Enter the numbers,seperated by comma(',')</h4>
+    <input type="text" id="number">
+    <button type="button" id="add">ADD</button>
+    <button type="button" id="multi">MULTI</button>
+    <p id="para"></p>
+    <script>
+        function output(msg) {
+            document.getElementById("para").innerHTML = msg;
+        }
+        function add(...num) {
+            let sum = 0;
+            for (let i = 0; i < num.length; i++) {
+                sum += num[i];
+            }
+            return sum;
+        }
+        function multi(...num) {
+            let result = 1;
+            for (let i = 0; i < num.length; i++) {
+                result *= num[i];
+            }
+            return result;
+        }
+
+        document.getElementById("add").onclick = () => {
+            let number = document.getElementById("number").value;
+            let newnumber = number.split(',').map(Number);
+            if (newnumber.length === 1 || newnumber.some(isNaN)) {
+                output("please enter a valid number");
+            }
+            else {
+                output(`RESULT:${add(...newnumber)}`);
+            }
+            setTimeout(() => {
+                output("");
+                document.getElementById("number").value = "";
+            }, 3000);
+        }
+        document.getElementById("multi").onclick = () => {
+            let number = document.getElementById("number").value;
+            let newnumber = number.split(',').map(Number);
+            if (newnumber.length === 1 || newnumber.some(isNaN)) {
+                output("please enter a valid number");
+            }
+            else {
+                output(`RESULT:${multi(...newnumber)}`);
+            }
+
+            setTimeout(() => {
+                output("");
+                document.getElementById("number").value = "";
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

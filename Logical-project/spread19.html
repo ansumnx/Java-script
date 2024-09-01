@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Enter the numbers, seperated by comma(','):</h3>
+    <input type="text" id="number">
+    <button type="button" id="btn">FIND</button>
+    <h5 id="para"></h5>
+    <script>
+
+        document.getElementById("btn").onclick = () => {
+            let num = document.getElementById("number").value;
+            let newnum = num.split(',').map(Number);
+            if (newnum.length === 0 || newnum.some(isNaN)) {
+                document.getElementById("para").innerHTML = "Please enter valid number";
+            }
+            else {
+                let max = Math.max(...newnum);
+                document.getElementById("para").innerHTML = max;
+
+            }
+            setTimeout(() => {
+
+                document.getElementById("para").innerHTML = "";
+                document.getElementById("number").value = "";
+            }, 3000);
+
+
+        }
+    </script>
+</body>
+
+</html>

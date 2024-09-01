@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4 style="display:inline;" id="name">Name:</h4>
+    <input type="text" id="name">
+    <h4 style="display:inline;" id="pswd">Password:</h4>
+    <input type="text" id="name">
+    <button type="button" id="btn" onclick="mylogin()">Login </button>
+    <h5 id="para"></h5>
+    <script>
+        function clear() {
+            document.getElementById("name").value = "";
+            document.getElementById("pswd").value = "";
+            document.getElementById("para").innerHTML = "";
+        }
+        function login(msg) {
+            document.getElementById("para").innerHTML = msg;
+        }
+        let i = 0;
+        function mylogin() {
+            let button = document.getElementById("btn");
+            let name = document.getElementById("name").value;
+            let pswd = Number(document.getElementById("pswd").value);
+            if ((name === "anshuman" || name === "Anshuman") && pswd === 3112) {
+                login(`Welcome back ${name}`);
+                setTimeout(() => {
+                    clear("");
+                }, 3000);
+            }
+            else {
+                i++;
+                login("Try again");
+                setTimeout(()=>{
+                  clear();
+                },2000);
+                if (i === 3) {
+                    login("Opps! Try again after 7 sec");
+                    button.style.display = "none";
+                    setTimeout(() => {
+                        button.style.display = "block";
+                        i = 0;
+                    }, 10000);
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>Login:</h4>
+    <h5 style="display: inline;">Name:</h5>
+
+    <input type="text" id="name">
+    <h5 style="display: inline;">Pswd:</h5>
+    <input type="password" id="pswd">
+    <button style="display: inline;" id="btn" type="button" onclick="Login()">Login</button>
+    <h4 id="para"></h4>
+    <script>
+        function clean() {
+            document.getElementById("name").value = "";
+            document.getElementById("pswd").value = "";
+            document.getElementById("para").innerHTML = "";
+        }
+        function msg(msg) {
+            document.getElementById("para").innerHTML = msg;
+        }
+        let i = 0;
+        function Login() {
+            let btn = document.getElementById("btn");
+            let name = document.getElementById("name").value;
+            let pswd = Number(document.getElementById("pswd").value);
+            if ((name === "anshuman" || name === "brajendra") && (pswd === 3112 || pswd=== 1562)) {
+                msg(`Welcome back ${name}`);
+                setTimeout(() => {
+                    clean();
+                }, 3000);
+            }
+            else {
+                msg("Try again");
+                i++;
+                if (i === 3) {
+                    msg("Opps! Try again after 9 sec");
+                    btn.style.display = "none";
+                }
+                setTimeout(() => {
+                    i=0;
+                    btn.style.display = "block";
+                }, 9000);
+                setTimeout(() => {
+                    clean();
+                }, 2000);
+            }
+        }
+    </script>
+
+
+    </script>
+
+</body>
+
+</html>

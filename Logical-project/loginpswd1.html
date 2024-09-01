@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question1</title>
+
+</head>
+
+<body>
+    <input type="text" id="roll" placeholder="enter your password">
+    <input type="button" id="btn" value="submit">
+    <p id="ans"></p>
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let a = Number(document.getElementById("roll").value);
+            if (a == 3112 || a == 1562) {
+                document.getElementById("ans").innerHTML = "Welcome back king";
+                document.getElementById("roll").value = "";
+                
+            }
+            else {
+                
+                document.getElementById("ans").innerHTML = "Wrong password";
+                document.getElementById("roll").value = "";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

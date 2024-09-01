@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2 id="item">1</h2>
+    <button type="button" id="add">add</button>
+    <button type="button" id="reset">reset</button>
+    <button type="button" id="sub">remove</button>
+    <p id="para"></p>
+    <script>
+        let i = 1;
+        function display() {
+            document.getElementById("item").innerHTML = i;
+            document.getElementById("para").innerHTML = "";
+        }
+
+        document.getElementById("add").onclick = () => {
+            if (i < 10) {
+                i++;
+                display();
+            }
+            else {
+                document.getElementById("para").innerHTML = "maximum";
+            }
+        }
+        document.getElementById("reset").onclick = () => {
+            i = 1;
+              display();                 
+       
+        }
+        document.getElementById("sub").onclick = () => {
+            if (i > 1) {
+                i--;
+                display();
+            }
+            else {
+                document.getElementById("para").innerHTML = "sorry";
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Choose:</h4>
+    <input type="date" id="date">
+    <button id="btn1" type="button">50</button>
+    <button id="btn2" type="button">100</button>
+    <button id="btn3" type="button">150</button>
+    <p id="para"></p>
+    <script>
+        document.getElementById("btn1").onclick =()=>{
+            let date = new Date(document.getElementById("date").value);
+            date.setDate(date.getDate() + 50);
+            let final = date.toLocaleDateString().split('T')[0];
+            document.getElementById("para").innerHTML = final;
+        }
+        document.getElementById("btn2").onclick=()=>{
+            let date = new Date(document.getElementById("date").value);
+            date.setDate(date.getDate() + 100 );
+            let final = date.toLocaleDateString().split('T')[0];
+            document.getElementById("para").innerHTML = final;    
+        }
+        document.getElementById("btn3").onclick=()=>{
+            let date = new Date(document.getElementById("date").value);
+            date.setDate(date.getDate() + 150);
+            let final = date.toLocaleDateString().split('T')[0];
+            document.getElementById("para").innerHTML = final;    
+
+        }
+    </script>
+</body>
+</html>

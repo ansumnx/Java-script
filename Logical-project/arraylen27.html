@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Enter your names,seperated by comma(',')</h4>
+    <input type="text"  id="date">
+    <button type="button" id="btn">Submit</button>
+    <p id="para"></p>
+    <script>
+        document.getElementById("btn").onclick=()=>{
+            let name = document.getElementById("date").value;
+            let newname = name.split(',');
+            let length = newname.map( n => `${n.trim()} = ${n.trim().length}`)
+            document.getElementById("para").innerHTML = length.join(', ');
+        }
+      
+    </script>
+</body>
+</html>

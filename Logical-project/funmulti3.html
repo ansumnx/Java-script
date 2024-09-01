@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input type="text" id="value" placeholder="use , to seprate" />
+    <button id="btn" type="button" onclick="multi()">multi</button>
+    <p id="para"></p>
+    <script>
+      function multiply(num) {
+        let ans=1;
+        for (let i = 0; i < num.length; i++) {
+          ans *= num[i];
+        }
+        return ans;
+      }
+      function multi() {
+        let a = document.getElementById("value").value;
+        let numbers = a.split(",").map(Number);
+        if (numbers === 0 || numbers.length < 2 || numbers.some(isNaN)) {
+          document.getElementById("para").innerHTML = "enter valid numbers";
+        } else {
+          let result = multiply(numbers);
+          document.getElementById("para").innerHTML = result;
+          document.getElementById("value").innerHTML = "";
+          console.log(result);
+        }
+      }
+    </script>
+  </body>
+</html>

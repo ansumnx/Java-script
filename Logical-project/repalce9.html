@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Enter the sentence:</h3>
+    <textarea rows="10" cols="50" id="data"></textarea>
+    <h6>Enter like this:<i> cat , dog</i>. it means replace cat with dog</h6>
+    <input type="text" id="remove" placeholder="enter word ">
+    <button type="button" id="btn">submit</button>
+    <h5 id="para"></h5>
+    <script>
+        function clean() {
+            document.getElementById("para").innerHTML = "";
+            document.getElementById("data").value = "";
+            document.getElementById("remove").value = "";
+        }
+        
+        document.getElementById("btn").onclick = () => {
+            let data = document.getElementById("data").value;
+            let replace = document.getElementById("remove").value;
+            let remove = replace.split(',').map(item => item.trim());
+    
+            if (data.length === 0 || replace.length === 0) {
+                document.getElementById("para").innerHTML = "Please enter a sentence and words to replace.";
+                return;
+            }
+    
+            let oldWord = remove[0];
+            let newWord = remove[1];
+            
+            let newsen = data.replace(new RegExp(oldWord, 'g'), newWord);
+            document.getElementById("para").innerHTML = newsen;
+    
+            setTimeout(() => {
+                clean();
+            }, 9000);
+        }
+    </script>
+    
+    </script>
+
+
+
+
+
+</body>
+
+</html>

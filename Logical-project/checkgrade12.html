@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>Please enter your Roll number. To check your Batch:</h5>
+    <input type="text" id="roll" placeholder="enter your roll number">
+    <button type="button" id="btn" onclick="mygrade()">Check</button>
+    <h3 id="para"></h3>
+    <script>
+        function batch(msg) {
+            document.getElementById("para").innerHTML = msg;
+
+        }
+        function mygrade() {
+            let roll = Number(document.getElementById("roll").value);
+            switch (true) {
+                case (roll > 0 && roll < 150): {
+                    batch("BATCH A : MONDAY");
+                    break;
+
+                }
+                case (roll >= 150 && roll < 300): {
+                    batch("BATCH B : TUESDAY");
+                    break;
+                }
+                case (roll >= 300 && roll < 500): {
+                    batch("BATCH C : WEDNESDAY");
+                    break;
+                }
+                default: {
+                    batch("please enter valid roll number");
+                }
+
+            }
+        setTimeout(() => {
+            batch("");
+            document.getElementById("roll").value ="";
+        }, 3000);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Username Length</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="Enter your name">
+    <button id="btn">Submit</button>
+    <p id="para"></p>
+
+    <script>
+       const roll ={
+        name:"",
+        set names(value){
+            this.name = value;
+        },
+        get rollnumber(){
+            if(this.name === "anshuman"){
+                return 3112;
+            }
+            else if(this.name === "brajendra"){
+                return 1562;
+            }
+            else{
+                return "error";
+            }
+        }
+       }
+
+
+        document.getElementById("btn").onclick = () => {
+            let nam = document.getElementById("name").value;
+            roll.names = nam ; 
+            let final = roll.rollnumber;
+            document.getElementById("para").innerHTML = final;
+        }
+
+    </script>
+</body>
+
+</html>

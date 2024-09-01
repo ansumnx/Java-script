@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter">
+    <input type="text" id="char" placeholder="enter">
+    <button type="button" id="btn" onclick="findchar()">submit</button>
+    <p id="para"></p>
+    <script>
+        function findchar(){
+
+            let name=document.getElementById("name").value;
+            let char= Number(document.getElementById("char").value);
+            let result= name.charAt(char);
+            document.getElementById("para").innerHTML = result;
+            setTimeout(()=>{
+                let name=document.getElementById("name").value="";
+                let char=document.getElementById("char").value ="";
+                document.getElementById("para").innerHTML = "";
+
+            },2000)
+        }
+
+    </script>
+</body>
+</html>

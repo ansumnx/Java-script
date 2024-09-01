@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="text-align: center;">
+    <div id="sty">
+
+        <h3><mark>Guessing Gumbling</mark></h3>
+        <h5>- Enter your 3 guess between 0-10. </h5>
+        <h5>- If 3 out of 3 Guess correct , Profit 200% </h5>
+        <h5>- If 3 out of 2 Guess correct , Profit 100% </h5>
+        <h5>- If 3 out of 1 Guess correct , Loss 0% </h5>
+        <h3>Enter 3 number seperated by commas(,)</h3>
+        <input type="text" id="guess">
+        <button type="button" id="btn" onclick="myguess()">Guess</button>
+        <h4 id="para"></h4>
+        <h4 id="userguess"></h4>
+        <h4 id="correctguess"></h4> 
+    </div>
+    
+    <script>
+        function say(msg){
+             document.getElementById("para").innerHTML = msg;
+        }
+
+       function myguess(){
+            let guess1 = Math.floor(Math.random()*10)+1;
+            let guess2 = Math.floor(Math.random()*10)+1;
+            let guess3 = Math.floor(Math.random()*10)+1;
+            let correctguess = [guess1,guess2,guess3];
+
+            let userguess = document.getElementById("guess").value;
+            let userguesss = userguess.split(',').map(Number);
+           
+            if(userguesss.length !==3 || userguesss.some(isNaN) || userguesss.some(num => num > 10 || num < 0 )){
+                say("Please enter valid number");
+            }
+            else{
+                let correct = 0;
+                if(userguesss.includes(guess1)) correct++;
+                if(userguesss.includes(guess2))  correct++;
+                if(userguesss.includes(guess3))  correct++;
+                if(correct===3){
+                    say("3 correct: PROFIT 200%");
+                }
+                else if(correct===2){
+                    say("2 correct: PROFIT 100%");
+                }
+                else if(correct===1){
+                    say("1 correct: LOSS 0%");
+                }
+                else{
+                    say("0 correct! LOSS");
+                }
+                document.getElementById("userguess").innerHTML =`YOUR GUESS:${userguesss.join(',')}`
+                document.getElementById("correctguess").innerHTML =`CORRECT GUESS:${correctguess.join(',')}`
+            }
+            setTimeout(() => {
+                document.getElementById("para").innerHTML="";
+                document.getElementById("guess").value="";
+                document.getElementById("userguess").innerHTML="";
+                document.getElementById("correctguess").innerHTML="";
+            }, 4000);
+       }
+    </script>
+</body>
+
+</html>

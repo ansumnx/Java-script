@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Guess between 95-160:</p>
+    <input type="text" id="guess">
+    <button type="button" id="btn">Guess</button>
+    <p id="para"></p>
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let guess = Math.floor(Math.random() * (150 - 100 + 1) + 100);
+            let userguess = Number(document.getElementById("guess").value);
+            if (userguess.length == 0 || userguess.some(isNaN) || userguess.some(num => num > 150 || num < 100)) {
+                document.getElementById("para").innerHTML = "Enter a valid number!";
+                console.log("hello");
+            }
+            else {
+                if (userguess === guess) {
+
+                    document.getElementById("para").innerHTML = "Correct Guess!";
+                }
+                else {
+
+                    document.getElementById("para").innerHTML = "Try Again!";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

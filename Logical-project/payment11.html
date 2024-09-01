@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h5>Select payment type:</h5>
+    <input type="radio" name="payment" id="paytm">
+    <label for="paytm">Paytm</label><br>
+    <input type="radio" name="payment" id="phonepay">
+    <label for="phonepay">Phonepay</label><br>
+    <input type="radio" name="payment" id="Gpay">
+    <label for="Gpay">Gpay</label> <br><br>
+    <button type="button" id="btn" onclick="payment()">Pay</button>
+    <h4 id="para"></h4>
+    <script>
+        function paying(msg) {
+            document.getElementById("para").innerHTML = msg;
+
+        }
+        function payment() {
+            let paytm = document.getElementById("paytm");
+            let phonepay = document.getElementById("phonepay");
+            let gpay = document.getElementById("Gpay");
+            if (paytm.checked) {
+                paying("paying through Paytm");
+            }
+            else if(phonepay.checked) {
+                paying("paying with Phonepay");
+            }
+             else if(gpay.checked) {
+                paying("paying with Gpay")
+            }
+            else{
+                paying("Please select a payment mode");
+            }
+            setTimeout(()=>{
+              paying("payed");
+
+            },2000);
+            setTimeout(() => {
+                paying("")
+            }, 3000);
+        }
+    </script>
+</body>
+
+</html>

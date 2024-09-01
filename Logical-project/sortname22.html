@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Enter names seperated by comma(',')</h4>
+    <input type="text" id="names">
+    <button type="button" id="btn">Submit</button>
+    <p id="para"></p>
+    <script>
+        function print(msg){
+            document.getElementById("para").innerHTML += msg;
+        }
+        function sort(...names){
+            return names.sort().join(',');
+        }
+        document.getElementById("btn").onclick=()=>{
+            let name = document.getElementById("names").value.split(',');
+            let newname = sort(...name);
+            print(`${newname}<br>`);
+            setTimeout(() => {
+                document.getElementById("para").innerHTML = "";
+                document.getElementById("names").value ="";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

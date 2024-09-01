@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+</head>
+
+<body>
+    <h3 style="text-align: center;">TEMPERATURE CONVERTER</h3>
+    <div style="text-align: center;">
+        <label for="Celsius">Celsius</label>
+        <input type="text" id="Celsius">
+        <input type="text" id="Fahrenheit">
+        <label for="Fahrenheit">Fahrenheit</label>
+    </div>
+    <script>
+        document.getElementById("Celsius").addEventListener('input', () => {
+            let cel = document.getElementById("Celsius").value;
+            let feh = document.getElementById("Fahrenheit");
+
+            if (!isNaN(cel) && cel !== "") {
+                let Fahrenheit = (parseFloat(cel) * 9 / 5) + 32;
+                feh.value = Fahrenheit.toFixed(2);
+            }
+        });
+
+        document.getElementById("Fahrenheit").addEventListener('input', () => {
+            let feh = document.getElementById("Fahrenheit").value;
+            let cel = document.getElementById("Celsius");
+
+            if (!isNaN(feh) && feh !== "") {
+                let Celsius = (parseFloat(feh) - 32) * 5 / 9;
+                cel.value = Celsius.toFixed(2);
+            }
+        });
+    </script>
+</body>
+
+</html>

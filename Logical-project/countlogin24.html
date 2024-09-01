@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>ENTER YOUR NAME:</h4>
+    <input type="text" id="name">
+    <button type="button" id="login">LOGIN</button>
+    <button type="button" id="logout">LOGOUT</button>
+    <p id="para"></p>
+    <script>
+        let i = 0;
+        document.getElementById("login").onclick = () => {
+            let name = document.getElementById("name").value;
+            if (name.length === 0) {
+                document.getElementById("para").innerHTML = "ERROR!"
+
+            }
+            else {
+                document.getElementById("para").innerHTML = `Welcome back! ${name}`;
+                i++;
+                
+            }
+            setTimeout(() => {
+                document.getElementById("name").value = "";
+                document.getElementById("para").innerHTML = "";
+            }, 3000);
+        }
+        document.getElementById("logout").onclick = () => {
+            document.getElementById("para").innerHTML = `you login ${i} times today`;
+            
+            setTimeout(() => {
+                document.getElementById("name").value = "";
+                document.getElementById("para").innerHTML = "";
+            }, 3000);
+
+
+        }
+    </script>
+</body>
+
+</html>

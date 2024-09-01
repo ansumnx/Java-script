@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="name" placeholder="enter">
+    <button type="button" id="btn">submit</button>
+    <p id="para"></p>
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let len = document.getElementById("name").value;
+            let length = len.length;
+            
+            if (length === 0) {
+                document.getElementById("para").innerHTML = "please enter";
+            }
+            else {
+
+                document.getElementById("para").innerHTML = `length is ${length}`;
+            }
+            setTimeout(() => {
+                let len = document.getElementById("name").value = "";
+                document.getElementById("para").innerHTML = "";
+            }, 2000);
+
+        }
+
+    </script>
+</body>
+
+</html>
