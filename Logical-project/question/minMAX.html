@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="first">enter first number</label>
+    <input type="text" id="first"> <br> <br>
+
+    <label for="sec">enter scnd number</label>
+    <input type="text" id="sec"> <br> <br>
+
+    <button type="button" id="min">MIN</button>
+    <button type="button" id="max">MAX</button>
+    <h4 id="ans"></h4>
+    <script>
+        document.getElementById("min").onclick = function(){
+            let first = Number(document.getElementById("first").value);
+            let sec = Number(document.getElementById("sec").value);
+            let min = Math.min(first,sec);
+            document.getElementById("ans").innerHTML = "RESULT = " + min;
+        }
+        document.getElementById("max").onclick = function(){
+            let first = Number(document.getElementById("first").value);
+            let sec = Number(document.getElementById("sec").value);
+            let max = Math.max(first,sec);
+            document.getElementById("ans").innerHTML = "RESULT = " + max;
+        }
+    </script>
+    
+</body>
+</html>

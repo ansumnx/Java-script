@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<label for="num">ENTER NUMBER</label>
+<input type="text" id="num"> &nbsp;
+
+
+<input type="radio" name="math" id="sqr">
+<label for="sqr">squre</label>
+
+<input type="radio" name="math" id="cube">
+<label for="cube">cube</label> &nbsp;
+
+
+<button type="button" id="btn">submit</button>
+<h3 id="ans"></h3>
+<script>
+    document.getElementById("btn").onclick = function(){
+        let number = Number(document.getElementById("num").value);
+        if(sqr.checked)
+        {
+            const sqr = (number) => Math.pow(number,2);
+           document.getElementById("ans").innerHTML = sqr(number); 
+        }
+    else if(cube.checked){
+        let cube = (number) => Math.pow (number ,3);
+        document.getElementById("ans").innerHTML = cube(number) ;
+    }
+    else
+    {
+        document.getElementById("ans").innerHTML = "please select!";
+    }
+    }
+</script>
+ 
+
+</body>
+</html>

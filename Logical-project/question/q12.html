@@ -1,0 +1,47 @@
+<!-- switch statement -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="grade">ENTER YOUR GRADE</label>
+    <input type="text" id="grade" placeholder="IN-CAPITAL" />
+    <button type="button" id="btn">submit</button>
+    <h4 id="ans"></h4>
+    <script>
+        let grade;
+        document.getElementById("btn").onclick = function () {
+            grade = document.getElementById("grade").value;
+            switch (grade) {
+                case "A": {
+                    document.getElementById("ans").innerHTML = "EXCELLENT!";
+                    break;
+                }
+                case "B": {
+                    document.getElementById("ans").innerHTML = "GOOD!";
+                    break;
+                }
+                case "C": {
+                    document.getElementById("ans").innerHTML = "NEED IMPROVEMENT!";
+                    break;
+                }
+                case "D": {
+                    document.getElementById("ans").innerHTML = "FAIL,BETTER LUCK TIME!";
+                    break;
+                }
+                default:
+                    {
+                        document.getElementById("ans").innerHTML = "please select grade between A-D!";
+                        
+                    }
+            }
+        };
+    </script>
+</body>
+
+</html>

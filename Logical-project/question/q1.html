@@ -1,0 +1,39 @@
+<!-- Take input and typeconversion  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">Name</label>
+    <input type="text" id="name"> 
+    <label for="age">Age</label>
+    <input type="text" id="age"> 
+    <button type="button" id="btn">submit</button> <br>
+    <p id="data"></p>
+    
+    <script>
+        let name;
+        let age;
+
+        document.getElementById("btn").onclick = function () {
+            name = document.getElementById("name").value;
+            age = document.getElementById("age").value;
+            age = Number(age);
+            let text = `your name is ${name} <br>
+                your age is ${age} `;
+
+            document.getElementById("data").innerHTML = text;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

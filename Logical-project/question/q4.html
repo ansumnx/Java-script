@@ -1,0 +1,48 @@
+<!--COUNTER PROGRAM-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lab {
+            display: block;
+            font-size: 60px;
+            margin: 20px 110px;
+        }
+
+        button {
+            font-size: 20px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <label id="lab">0</label>
+    <button type="button" id="increase">increase</button>
+    <button type="button" id="reset">reset</button>
+    <button type="button" id="decrease">decrease</button>
+
+    <script>
+        let count = 1;
+        document.getElementById("increase").onclick = function () {
+            count++;
+            document.getElementById("lab").innerHTML = count;
+        }
+        document.getElementById("reset").onclick = function (){
+            count=0;
+            document.getElementById("lab").innerHTML = count;
+        }
+        document.getElementById("decrease").onclick = function(){
+            count--;
+            document.getElementById("lab").innerHTML = count;
+        }
+
+    </script>
+</body>
+
+</html>

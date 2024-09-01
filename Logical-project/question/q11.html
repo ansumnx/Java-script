@@ -1,0 +1,63 @@
+<!-- PROGARM  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-transform: uppercase;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            line-height: 2px;
+            letter-spacing: 5px;
+        }
+
+        label {
+            color: red;
+        }
+
+        form {
+            font-size: 20px;
+            margin: 20px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>select your fav youtuber</h1>
+    <form action="" method="get" target="_self">
+
+        <input type="radio" name="youtube" id="logan">
+        <label for="logan">Logan</label><br>
+        <input type="radio" name="youtube" id="ishowspeed">
+        <label for="ishowspeed">Ishowspeed</label><br>
+        <input type="radio" name="youtube" id="jake">
+        <label for="jake">Jake</label> <br>
+        <button id="btn" type="button">submit</button>
+        <h4 id="ans"></h4>
+    </form>
+    <script>
+        document.getElementById("btn").onclick = function () {
+          let  logan = document.getElementById("logan");
+          let  ishowspeed = document.getElementById("ishowspeed");
+          let  jake = document.getElementById("jake");
+            if (logan.checked) {
+                document.getElementById("ans").innerHTML = "you have selected logan";
+            }
+            else if (ishowspeed.checked) {
+                document.getElementById("ans").innerHTML = "you have selected ishowspeed";
+            }
+            else {
+                document.getElementById("ans").innerHTML = "you have selected  jake";
+
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>sum of an array element</h4>
+    <label for="first">Enter array element-seperate with comma( , )</label>
+    <input type="text" id="first">
+
+    <button id="btn" type="button">submit</button>
+    <h4 id="ans"></h4>
+    <script>
+        document.getElementById("btn").onclick = () =>{
+            let first = document.getElementById("first").value.split(',').map(Number);
+              
+
+            const sum = (first) => {
+                let total = 0;
+                for (let i of first){
+                    total = total+i;
+                }
+                return total;
+            }
+            document.getElementById("ans").innerHTML = sum(first);
+
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>enter number</h3>
+    <input type="text" id="num">
+    <button id="btn" type="button">add</button>
+    <h3 id="ans"></h3>
+    <script>
+        document.getElementById("btn").onclick=()=>{
+            let num= document.getElementById("num").value.split(',').map(Number);
+
+            let sum=(num)=>{
+               let total=0;
+              for (let i of num){
+                total = total+i;
+              }
+              return total;
+            }
+        
+            document.getElementById("ans").innerHTML = sum(num);
+         
+        }
+    </script>
+    
+</body>
+</html>

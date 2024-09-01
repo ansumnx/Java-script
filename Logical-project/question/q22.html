@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>sort an given array</h3>
+    <label for="first">Enter array element-seperate with comma( , )</label>
+    <input type="text" id="num">
+    <button type="button" id="btn">submit</button>
+    <h3 id="ans"></h3>
+    <script>
+        document.getElementById("btn").onclick=()=>{
+    let num = document.getElementById("num").value.split(',').map(Number);
+
+    let sorted = num.sort(function(a,b){
+        return a-b;
+    });
+    document.getElementById("ans").innerHTML= sorted;
+}
+    </script>
+    
+</body>
+</html>

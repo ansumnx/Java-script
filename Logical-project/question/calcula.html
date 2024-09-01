@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <input type="text" id="first" placeholder="enter first number">
+    <input type="text" id="second" placeholder="enter second number">
+    <button id="btn" type="button">submit</button>
+    <p id="result"></p>
+
+
+    <script>
+
+
+        document.getElementById("btn").onclick = () => {
+
+            let a = Number(document.getElementById("first").value);
+            let b = Number(document.getElementById("second").value);
+
+            function calculate(a, b) {
+
+                let add = a + b;
+                let sub = a - b;
+                let multi = a * b;
+                let div = a / b;
+
+                return [add, sub, multi, div];
+            }
+
+            let [ADD, SUB, MULTI, DIV] = calculate(a, b);
+
+            let result = (`SUM = ${ADD} , SUBSTRACT = ${SUB} , MULTI = ${MULTI} , DIVIDE = ${DIV}`);
+            document.getElementById("result").innerHTML = result;
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

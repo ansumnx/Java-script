@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set User Name</title>
+</head>
+<body>
+
+    <form id="nameForm">
+        <label for="userName">Enter Your Name:</label>
+        <input type="text" id="userName" placeholder="Type your name here">
+        <button type="button" onclick="setName()">Set Name</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        const user = {
+            name: '',
+            set name(newName) {
+                this.name = newName;
+            },
+            get name() {
+                return this.name;
+            }
+        };
+
+        function setName() {
+            const inputElement = document.getElementById('userName').value;
+            user.name = inputElement;
+
+            const outputElement = document.getElementById('output'); 
+            outputElement.textContent = `User's name: ${user.name}, Length: ${user.name.length}`;
+        }
+    </script>
+    
+</body>
+</html>

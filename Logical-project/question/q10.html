@@ -1,0 +1,25 @@
+<!-- METHOD CHAINING!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">enter your name</label>
+    <input type="text" id="name">
+    <button type="button" id="btn">submit</button>
+    <p id="ans"></p>
+    <script>
+        let name;
+        document.getElementById("btn").onclick = function(){
+            name=document.getElementById("name").value;
+            name=name.charAt(2).toUpperCase();
+            document.getElementById("ans").innerHTML = name;
+        }
+    </script>
+
+    
+</body>
+</html>

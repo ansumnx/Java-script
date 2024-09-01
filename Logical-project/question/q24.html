@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">enter your name</label>
+    <input type="text" id="name">
+    <label for="age">enter your age</label>
+    <input type="text" id="age">
+    <button type="button" id="btn">submit</button>
+    <h3 id="ans"></h3>
+    <script>
+
+
+
+        document.getElementById("btn").onclick = () => {
+            let name = document.getElementById("name").value;
+            let age = Number(document.getElementById("age").value);
+            let text = `hello there ${name} , you are ${age} years old`;
+
+            document.getElementById("ans").innerHTML  = text;
+           
+
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!--find 6 letter of user input-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">enter your name</label>
+    <input type="text" id="name">
+    <button type="button" id="btn">submit</button>
+    <p id="ams"></p>
+    <script>
+        let name;
+        let n;
+        document.getElementById("btn").onclick = function(){
+            name=document.getElementById("name").value;
+            n = name.charAt(6);
+            document.getElementById("ams").innerHTML = "char at 6 position is " + n;
+        }
+    </script>
+
+    
+</body>
+</html>

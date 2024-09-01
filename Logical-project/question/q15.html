@@ -1,0 +1,30 @@
+<!-- creating function -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>TODAY IS YOUR BIRTHDAY!</h3>
+    <button type="button" id="yes">YES</button>
+    <button type="button" id="no">NO</button>
+    <h4 id="ans"></h4>
+    <script>
+        let text=`Happy birthday to you! <br>
+        Happy birthday to you dear! <br>
+        happy birthday to you`
+        document.getElementById("yes").onclick = function () {
+            document.getElementById("ans").innerHTML = text;
+
+        };
+        document.getElementById("no").onclick = function () {
+            document.getElementById("ans").innerHTML = "ok";
+        };
+    </script>
+</body>
+
+</html>

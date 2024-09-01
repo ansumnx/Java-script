@@ -1,0 +1,35 @@
+<!--to uppercase / lowercase-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter your name</label>
+    <input type="text" id="name">
+    <button type="button" id="up">UPPERCASE</button>
+    <button type="button" id="low">lowercase</button>
+    <p id="ans"></p>
+    <script>
+        let upper;
+        let up;
+        let lower;
+        let low;
+        document.getElementById("up").onclick = function(){
+            upper=document.getElementById("name").value;
+            up = upper.toUpperCase();
+            document.getElementById("ans").innerHTML = up;
+        }
+        document.getElementById("low").onclick = function(){
+            lower= document.getElementById("name").value;
+            low = lower.toLowerCase();
+            document.getElementById("ans").innerHTML = low;
+
+        }
+    </script>
+
+    
+</body>
+</html>

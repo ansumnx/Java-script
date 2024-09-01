@@ -1,0 +1,40 @@
+<!-- NUMBER GUESSING GAME -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>welcome to number guessing game</h1>
+    <h3>guess number between 1 to 10 :</h3>
+    <label for="guess">ENTER YOUR GUESS</label>
+    <input type="text" id="guess">
+    <button id="btn" type="button">submit</button>
+    <h3 id="ans"></h3>
+    <script>
+        let guess;
+        const num = Math.floor(Math.random() * 10) + 1;
+        document.getElementById("btn").onclick = function () {
+            guess = Number(document.getElementById("guess").value);
+            if (num == guess) {
+                document.getElementById("ans").innerHTML = "<h1>your guess is correct</h1>";
+            }
+            else if (guess > 10) {
+                document.getElementById("ans").innerHTML = "Guess under 1-10!"
+
+            }
+            else {
+                document.getElementById("ans").innerHTML = " Guess Again!";
+            }
+
+        }
+    </script>
+
+
+</body>
+
+</html>

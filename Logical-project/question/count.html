@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label{display: block;
+        font-size: 100px;
+        margin-left: 100px;
+    }
+    button{
+        margin-left: 10px;
+    }
+    button:hover{
+        background-color: red;
+    }
+    </style>
+</head>
+<body>
+    <label id="count">0</label>
+    <button type="button" id="increase">INCREASE</button>
+    <button type="button" id="reset">RESET</button>
+    <button type="button" id="decrease">DECREASE</button>
+    <script>
+        let count = 0;
+        document.getElementById("increase").onclick = function(){
+            count++;
+            document.getElementById("count").innerHTML = count;
+        }
+        document.getElementById("reset").onclick = function(){
+            count = 0;
+            document.getElementById("count").innerHTML = count;
+        }
+        document.getElementById("decrease").onclick = function(){
+            count--;
+            document.getElementById("count").innerHTML = count;
+        }
+    </script>
+    
+</body>
+</html>

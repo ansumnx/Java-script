@@ -1,0 +1,36 @@
+<!-- PRINTING TRIANGLE THROUGH DOM -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="row">enter row</label>
+    <input type="text" id="row">
+    <label for="col">enter column</label>
+    <input type="text" id="col">
+    <button type="button" id="btn">submit</button><br>
+    <h3 id="ans"></h3>
+    <script>
+        let row; 
+        let col;
+        document.getElementById("btn").onclick = function () {
+             row = document.getElementById("row").value;
+             col = document.getElementById("col").value;
+            for (let i = 1; i <= row; i++) {
+                for (let j = 1; j <= i; j++) {
+                    document.getElementById("ans").innerHTML += "*";
+                }
+
+                document.getElementById("ans").innerHTML += "<br>";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter Array Elements</h3>
+    <label for="enter">Enter elements (comma-separated)</label>
+    <input type="text" id="enter">
+    <button type="button" id="btn">submit</button>
+    <h4 id="ans"></h4>
+    <script>
+      document.getElementById("btn").onclick = function(){
+        let n = document.getElementById("enter").value.split(',').map(Number);
+        let maxi = Math.max(...n);
+        document.getElementById("ans").innerHTML = "maximum " + maxi;
+      }
+    </script>
+    
+</body>
+</html>

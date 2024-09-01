@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="name">enter</label>
+    <textarea id="name" cols="30" rows="10"></textarea> <br><br>
+
+    <label for="replace">Enter what you wanna replace</label><br><br>
+    <input type="text" id="replace">
+    <br> <br>
+    <label for="with">Enter what you want to replace with</label><br><br>
+    <input type="text" id="with"><br> <br>
+    <button type="button" id="btn">submit</button>
+
+    <h4 id="ans"></h4>
+    <script>
+        document.getElementById("btn").onclick = () => {
+            let para = document.getElementById("name").value;
+            let rep = document.getElementById("replace").value;
+            let wth = document.getElementById("with").value;
+
+            // Use the replace method with a regular expression to replace all occurrences
+            para = para.replace(new RegExp(rep ,"g"), wth);
+            document.getElementById("ans").innerHTML = para;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!-- TEMPERATURE CONVERTING PROGRAM -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>TEMPERATURE CONVETER</h1>
+    <label for="tem">ENTER TEMPERATURE</label>
+    <input type="text" id="tem" />
+
+    <input type="radio" name="temp" id="celcius" />
+    <label for="celcius">Celcius</label>
+
+    <input type="radio" name="temp" id="fah" />
+    <label for="fah">Fahrenheit</label>
+    <button type="button" id="btn">convert</button>
+    <h3 id="ans"></h3>
+    <script>
+      let temp;
+      document.getElementById("btn").onclick = function () {
+        if (document.getElementById("celcius").checked) {
+          temp = Number(document.getElementById("tem").value);
+          temp = tocelcius(temp);
+          document.getElementById("ans").innerHTML = temp + "°C";}
+
+        else if (document.getElementById("fah").checked) {
+          temp = Number(document.getElementById("tem").value);
+        temp = toFahrenheit(temp);
+
+         document.getElementById("ans").innerHTML = temp + "°F";
+        } else {
+          document.getElementById("ans").innerHTML = "please select!";
+        }
+      };
+
+      function tocelcius(temp) {
+        return (temp - 32) * (5 / 9);
+      }
+      function toFahrenheit(temp) {
+        return temp * 9 / 5 + 32;
+      }
+    </script>
+  </body>
+</html>

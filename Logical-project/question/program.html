@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">Enter your name</label>
+    <input type="text" id="name"> <br> <br>
+    <h3 id="ans"></h3>
+    <button type="button" id="len">LENGTH</button>
+    <button type="button" id="upper">UPPERCASE</button>
+    <button type="button" id="lower">LOWERCASE</button>
+    <button type="button" id="trim">TRIM</button>
+<script>
+    let len;
+     let upper;
+     let lower;
+     let trim;
+
+     document.getElementById("len").onclick = () => {
+        len = document.getElementById("name").value;
+        len=len.length;
+        len = Number(len);
+        document.getElementById("ans").innerHTML = len;
+     }
+
+     document.getElementById("upper").onclick = function(){
+        upper = document.getElementById("name").value;
+        upper = upper.toUpperCase();
+        document.getElementById("ans").innerHTML = upper;
+     }
+     document.getElementById("lower").onclick = function(){
+        lower = document.getElementById("name").value;
+        lower = lower.toLowerCase();
+        document.getElementById("ans").innerHTML = lower;
+     }
+     document.getElementById("trim").onclick = function(){
+        trim = document.getElementById("name").value;
+        trim = trim.trim();
+        document.getElementById("ans").innerHTML = trim;
+     }
+
+
+</script>
+</body>
+</html>

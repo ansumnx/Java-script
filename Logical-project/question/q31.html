@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 id="date"></h3>
+    <p>After</p>
+    <input type="number" id="newdate" placeholder="Enter years to add">
+    <button id="btn" type="button">Find date</button>
+    <h3 id="ans"></h3>
+    <script>
+          let curent= new Date();
+          document.getElementById("date").innerHTML=curent.toDateString();
+
+          document.getElementById("btn").onclick=()=>{
+            let after =Number( document.getElementById("newdate").value);
+
+           curent.setFullYear(curent.getFullYear + after);
+
+          document.getElementById("ans").innerHTML= curent.toDateString();
+
+        }
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
+

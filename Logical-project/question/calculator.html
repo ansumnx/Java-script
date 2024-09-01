@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="first">ENTER first number</label>
+    <input type="text" id="first"><BR></BR>
+
+    <label for="sec">enter second number</label>
+    <input type="text" id="sec">
+
+    <H4>SELECT~</H4>
+    <button type="button" id="add">ADD</button>
+    <button type="button" id="sub">SUBSTRACT</button>
+    <button type="button" id="mul">MULTIPLY</button>
+    <button type="button" id="div">DIVIDE</button> <br>
+    <h4 id="ans"></h4>
+    <script>
+        let first;
+        let sec;
+        let ans;
+        document.getElementById("add").onclick = () => {
+           first = Number(document.getElementById("first").value);
+           sec = Number(document.getElementById("sec").value);
+           ans = (first+sec);
+           document.getElementById("ans").innerHTML = " RESULT = " + ans;
+        }
+        document.getElementById("sub").onclick = function(){
+            first = Number(document.getElementById("first").value);
+            sec = Number(document.getElementById("sec").value);
+         ans = (first-sec);
+            document.getElementById("ans").innerHTML = "RESULT =" + ans;
+        }
+        document.getElementById("mul").onclick = function(){
+           first = Number(document.getElementById("first").value);
+           sec = Number(document.getElementById("sec").value);
+           ans = (first*sec);
+           document.getElementById("ans").innerHTML = " RESULT = " + ans;
+        }
+        document.getElementById("div").onclick = function(){
+           first = Number(document.getElementById("first").value);
+           sec = Number(document.getElementById("sec").value);
+           ans = (first/sec);
+           document.getElementById("ans").innerHTML = " RESULT = " + ans;
+        }
+
+
+    </script>
+</body>
+</html>
